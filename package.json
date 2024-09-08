@@ -12,6 +12,9 @@
   "dependencies": {
     "electron": "^32.0.2",
     "fast-levenshtein": "^3.0.0",
+    "gulp": "^5.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.1.0",
     "pretty-bytes": "^6.1.1"
   }
 }
