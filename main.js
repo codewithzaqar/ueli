@@ -12,7 +12,7 @@ app.on('ready', function() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        frame: false
+        //frame: false
     })
 
     mainWindow.loadURL('file://' + __dirname + '/index.html')
