@@ -32,7 +32,7 @@ app.on('ready', function(){
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/main.html');
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function(){
