@@ -111,6 +111,10 @@ $(function(){
     // Input Text Change
     $(selector.input).bind('input propertychange', function(){
         var searchString = $(this).val();
+        if(searchResult.split(' ').join('') === ''){
+            ResetGui()
+            return
+        }
 
         searchResult = GetSearchResult(searchString);
 
