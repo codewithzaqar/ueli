@@ -15,13 +15,12 @@ var mainWindowOptions = {
     //resizable: true,
     //devTools: true,
     transparent: true,
-    skipTaskbar: true,
-    show: false,
-    center: true
+    skipTaskbar: true
   };
 
 var mainWindowHtml = 'file://' + __dirname + '/main.html';
 
+// Quit when all windows are closed.
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
     app.quit();
