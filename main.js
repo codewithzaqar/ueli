@@ -1,5 +1,9 @@
-var {app, BrowserWindow, globalShortcut} = require('electron');  // Module to control application life.
-var ipc = require('electron').ipcMain
+var electron = require('electron');  // Module to control application life.
+
+var app = electron.app
+var BrowserWindow = electron.BrowserWindow
+var globalShortcut = electron.globalShortcut
+var ipcMain = electron.ipcMain
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -22,6 +26,8 @@ app.on('ready', function(){
     width: 600,
     height: 150,
     frame:false,
+    //resizable: true,
+    //devTools: true,
     transparent: true
   });
 
@@ -47,11 +53,11 @@ app.on('ready', function(){
       mainWindow.show();
   });
 
-  ipc.on('hide-main-window', function (){
+  ipcMain.on('hide-main-window', function (){
     mainWindow.hide();
   });
 
-  ipc.on('close-main-window', function(){
+  ipcMain.on('close-main-window', function(){
     app.quit()
   })
 });
